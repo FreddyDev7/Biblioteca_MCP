@@ -1,0 +1,9 @@
+[project]
+name = "biblioteca-mcp"
+version = "1.0.0"
+description = "Ejercicio educativo: servidor y cliente MCP para consultar una biblioteca ficticia."
+requires-python = ">=3.11"
+dependencies = ["mcp[cli]>=2.0,<3.0"]
+
+[tool.setuptools.packages.find]
+where = ["src"]

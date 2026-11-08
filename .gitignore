@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Entornos virtuales
+.venv/
+venv/
+ENV/
+
+# IDE y sistema operativo
+.idea/
+.vscode/*
+!.vscode/mcp.json
+.DS_Store
+Thumbs.db
+
+# Secretos y configuración local
+.env
+.env.*
+!.env.example
+
+# Distribución
+build/
+dist/
+*.egg-info/

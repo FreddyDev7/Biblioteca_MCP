@@ -1,0 +1,202 @@
+[
+  {
+    "id": "LIB-001",
+    "titulo": "Python desde cero",
+    "autor": "Lucía Herrera",
+    "categoria": "Programación",
+    "anio": 2021,
+    "ejemplares_totales": 3,
+    "ejemplares_disponibles": 2,
+    "descripcion": "Introducción práctica a Python, variables, funciones y estructuras de datos."
+  },
+  {
+    "id": "LIB-002",
+    "titulo": "algoritmos y estructuras",
+    "autor": "Mateo Ríos",
+    "categoria": "Programación",
+    "anio": 2020,
+    "ejemplares_totales": 4,
+    "ejemplares_disponibles": 1,
+    "descripcion": "Algoritmos clásicos, complejidad y estructuras de datos."
+  },
+  {
+    "id": "LIB-003",
+    "titulo": "Redes de computadoras",
+    "autor": "Elena Cruz",
+    "categoria": "Informática",
+    "anio": 2019,
+    "ejemplares_totales": 2,
+    "ejemplares_disponibles": 2,
+    "descripcion": "Fundamentos de redes, TCP/IP, DNS y enrutamiento."
+  },
+  {
+    "id": "LIB-004",
+    "titulo": "Sistemas operativos modernos",
+    "autor": "Daniel Vega",
+    "categoria": "Informática",
+    "anio": 2022,
+    "ejemplares_totales": 3,
+    "ejemplares_disponibles": 0,
+    "descripcion": "Procesos, hilos, memoria y sistemas de archivos."
+  },
+  {
+    "id": "LIB-005",
+    "titulo": "Aprendiendo Java",
+    "autor": "Sofía Méndez",
+    "categoria": "Programación",
+    "anio": 2018,
+    "ejemplares_totales": 5,
+    "ejemplares_disponibles": 3,
+    "descripcion": "Programación orientada a objetos con Java."
+  },
+  {
+    "id": "LIB-006",
+    "titulo": "Bases de datos SQL",
+    "autor": "Andrés Molina",
+    "categoria": "Bases de datos",
+    "anio": 2023,
+    "ejemplares_totales": 2,
+    "ejemplares_disponibles": 2,
+    "descripcion": "Diseño relacional, consultas SQL e índices."
+  },
+  {
+    "id": "LIB-007",
+    "titulo": "Git para equipos",
+    "autor": "Carla Fuentes",
+    "categoria": "Desarrollo",
+    "anio": 2021,
+    "ejemplares_totales": 4,
+    "ejemplares_disponibles": 2,
+    "descripcion": "Control de versiones y colaboración con Git."
+  },
+  {
+    "id": "LIB-008",
+    "titulo": "Ciberseguridad esencial",
+    "autor": "Pablo Torres",
+    "categoria": "Seguridad",
+    "anio": 2024,
+    "ejemplares_totales": 3,
+    "ejemplares_disponibles": 1,
+    "descripcion": "Principios de seguridad, amenazas y defensa."
+  },
+  {
+    "id": "LIB-009",
+    "titulo": "Linux práctico",
+    "autor": "Marina León",
+    "categoria": "Sistemas",
+    "anio": 2020,
+    "ejemplares_totales": 2,
+    "ejemplares_disponibles": 0,
+    "descripcion": "Administración básica de Linux desde la terminal."
+  },
+  {
+    "id": "LIB-010",
+    "titulo": "Diseño de APIs",
+    "autor": "Javier Soto",
+    "categoria": "Desarrollo",
+    "anio": 2022,
+    "ejemplares_totales": 3,
+    "ejemplares_disponibles": 3,
+    "descripcion": "Diseño de servicios REST y contratos de API."
+  },
+  {
+    "id": "LIB-011",
+    "titulo": "Aprendizaje automático",
+    "autor": "Nora Castillo",
+    "categoria": "Inteligencia artificial",
+    "anio": 2023,
+    "ejemplares_totales": 2,
+    "ejemplares_disponibles": 1,
+    "descripcion": "Conceptos de machine learning y evaluación de modelos."
+  },
+  {
+    "id": "LIB-012",
+    "titulo": "Introducción a la inteligencia artificial",
+    "autor": "Tomás Gil",
+    "categoria": "Inteligencia artificial",
+    "anio": 2024,
+    "ejemplares_totales": 4,
+    "ejemplares_disponibles": 2,
+    "descripcion": "Panorama de IA, agentes y modelos de lenguaje."
+  },
+  {
+    "id": "LIB-013",
+    "titulo": "Matemáticas para programadores",
+    "autor": "Irene Pardo",
+    "categoria": "Matemáticas",
+    "anio": 2017,
+    "ejemplares_totales": 2,
+    "ejemplares_disponibles": 2,
+    "descripcion": "Lógica, álgebra y matemáticas discretas."
+  },
+  {
+    "id": "LIB-014",
+    "titulo": "Python aplicado a datos",
+    "autor": "Lucía Herrera",
+    "categoria": "Programación",
+    "anio": 2024,
+    "ejemplares_totales": 3,
+    "ejemplares_disponibles": 1,
+    "descripcion": "Análisis de datos con Python."
+  },
+  {
+    "id": "LIB-015",
+    "titulo": "Microservicios con Python",
+    "autor": "Mateo Ríos",
+    "categoria": "Programación",
+    "anio": 2025,
+    "ejemplares_totales": 2,
+    "ejemplares_disponibles": 0,
+    "descripcion": "Construcción de servicios distribuidos en Python."
+  },
+  {
+    "id": "LIB-016",
+    "titulo": "Fundamentos de electrónica",
+    "autor": "Raúl Núñez",
+    "categoria": "Electrónica",
+    "anio": 2016,
+    "ejemplares_totales": 3,
+    "ejemplares_disponibles": 2,
+    "descripcion": "Electricidad, componentes y circuitos básicos."
+  },
+  {
+    "id": "LIB-017",
+    "titulo": "Historia de la computación",
+    "autor": "Eva Domínguez",
+    "categoria": "Historia",
+    "anio": 2015,
+    "ejemplares_totales": 1,
+    "ejemplares_disponibles": 1,
+    "descripcion": "Evolución de las computadoras y la informática."
+  },
+  {
+    "id": "LIB-018",
+    "titulo": "Patrones de diseño",
+    "autor": "Sergio Vidal",
+    "categoria": "Desarrollo",
+    "anio": 2021,
+    "ejemplares_totales": 2,
+    "ejemplares_disponibles": 2,
+    "descripcion": "Patrones comunes para diseñar software mantenible."
+  },
+  {
+    "id": "LIB-019",
+    "titulo": "Introducción a Docker",
+    "autor": "Paula Rey",
+    "categoria": "DevOps",
+    "anio": 2023,
+    "ejemplares_totales": 3,
+    "ejemplares_disponibles": 1,
+    "descripcion": "Contenedores, imágenes y despliegue."
+  },
+  {
+    "id": "LIB-020",
+    "titulo": "Ética de la inteligencia artificial",
+    "autor": "Marta Soler",
+    "categoria": "Inteligencia artificial",
+    "anio": 2025,
+    "ejemplares_totales": 2,
+    "ejemplares_disponibles": 2,
+    "descripcion": "Impacto social, sesgos y gobernanza de sistemas de IA."
+  }
+]

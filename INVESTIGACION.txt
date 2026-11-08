@@ -1,0 +1,78 @@
+INVESTIGACIÓN BREVE: CLIENTE, SERVIDOR Y ARGUMENTOS DE HERRAMIENTAS MCP
+======================================================================
+
+1. ¿Qué es MCP?
+---------------
+MCP (Model Context Protocol) es un protocolo abierto que estandariza la forma
+en que una aplicación cliente descubre y utiliza capacidades ofrecidas por
+otro programa. Entre esas capacidades están las herramientas (tools), los
+recursos (resources) y los prompts. En este ejercicio se utilizan herramientas.
+
+2. ¿Qué hace el cliente MCP?
+----------------------------
+El cliente es el componente que inicia la conexión con el servidor y actúa
+como consumidor de sus capacidades. En este proyecto, cliente.py:
+
+- Inicia server.py como un proceso local.
+- Se comunica con él mediante el transporte stdio (entrada y salida estándar).
+- Solicita la lista de herramientas disponibles.
+- Llama a buscar_libro enviando el argumento texto.
+- Por cada coincidencia, llama a consultar_disponibilidad enviando libro_id.
+- Recibe y presenta las respuestas.
+
+El cliente no necesita conocer cómo está implementado internamente el catálogo;
+solo necesita conocer el nombre de la herramienta, su descripción y su esquema
+de entrada.
+
+3. ¿Qué hace el servidor MCP?
+-----------------------------
+El servidor publica capacidades para que los clientes puedan utilizarlas.
+En este proyecto, server.py crea un MCPServer llamado "biblioteca-mcp" y
+registra dos herramientas con el decorador @mcp.tool():
+
+- buscar_libro(texto): busca fragmentos en título, autor, categoría y descripción.
+- consultar_disponibilidad(libro_id): devuelve el número de ejemplares disponibles.
+
+El servidor delega la lógica de negocio en catalogo.py y los datos están
+separados en data/libros.json. Esta separación evita mezclar protocolo,
+reglas de búsqueda y almacenamiento.
+
+4. ¿Cómo se describen los argumentos de una herramienta?
+---------------------------------------------------------
+Los argumentos se describen principalmente mediante:
+
+- El nombre del parámetro: por ejemplo, texto o libro_id.
+- La anotación de tipo de Python: texto: str indica que se espera una cadena.
+- El valor predeterminado, si existe: por ejemplo, limite: int = 10 sería
+  un entero opcional con valor inicial 10.
+- La docstring: explica el propósito del parámetro, su significado y ejemplos.
+
+El SDK oficial de Python inspecciona las anotaciones y la documentación de la
+función y genera el esquema de entrada que el cliente puede descubrir. Por eso
+no se escribe manualmente el JSON Schema en este ejercicio.
+
+Ejemplo conceptual:
+    @mcp.tool()
+    def consultar_disponibilidad(libro_id: str) -> str:
+        """Consulta ejemplares. libro_id: identificador como LIB-001."""
+        ...
+
+El esquema resultante comunica al cliente que la herramienta requiere un
+argumento llamado libro_id y que su valor debe ser una cadena. La validación
+de formato LIB-000 se realiza además en la lógica de la aplicación: el tipo
+str por sí solo no garantiza que el identificador tenga un formato correcto.
+
+5. Transporte utilizado
+-----------------------
+Se utiliza stdio porque el cliente y el servidor se ejecutan en la misma
+máquina. El cliente inicia el proceso servidor y el protocolo viaja por sus
+canales stdin/stdout. No hace falta abrir un puerto ni desplegar un servicio
+web. Los mensajes de diagnóstico deben escribirse en stderr; imprimir texto
+libre en stdout podría interferir con el protocolo.
+
+6. Límites del ejercicio
+------------------------
+Los datos son ficticios y se cargan desde un JSON local. No existe una base
+de datos, autenticación, préstamo real ni actualización concurrente del
+inventario. El objetivo es practicar el ciclo de descubrimiento y llamada
+de herramientas MCP, no construir un sistema bibliotecario de producción.
